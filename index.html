@@ -1,1 +1,29 @@
-My GitHub Page
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Team Map</title>
+    <link href="app.css" type="text/css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="app.js"></script>
+</head>
+<body class="container">
+	<h1>Team Map</h1>
+	<h2>A sample framework, where you can search people in your team</h2>
+    <div class="left-panel">
+        <div id="map-canvas"></div>
+    </div>
+    <div class="right-panel">
+		<input type="text" class="form-control" id="search" placeholder="Search Team Mates">
+		<input type="checkbox" class="check" id="rp"> Auto Replot Markers
+		<a href="javascript:" id="rplt">Re-Mark</a>
+		<div class="scroll-res">
+		<ul id="results"></ul>
+		</div>
+    </div>
+	<div class="footer">
+		<h4>&copy; The Jackal of Javascript | <a href="#">Github</a></h4>
+	</div>
+</body>
+</html>

@@ -45,7 +45,7 @@
 		});
 		
 		
-		},125);
+		},521);
 
         var draw = function (user) {
             var marker = new google.maps.Marker({

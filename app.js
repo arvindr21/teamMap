@@ -77,10 +77,10 @@
 
         };
 
-        $('#search').delayKeyup(function () {
+        $('#search').delayKeyup(function (ele) {
             var isChecked = $("#rp").is(":checked");
-            if (isChecked || $.trim($(this).val()).length == 0) map.clearMarkers();
-            var valThis = $(this).val().toLowerCase();
+            if (isChecked || $.trim($(ele).val()).length == 0) map.clearMarkers();
+            var valThis = $(ele).val().toLowerCase();
             $('#results>li').each(function (key, val) {
                 var text = $(this).text().toLowerCase();
 
@@ -123,7 +123,7 @@
             var timer = 0;
             $(this).keyup(function () {
                 clearTimeout(timer);
-                timer = setTimeout(callback, ms);
+                timer = setTimeout(callback($(this)), ms);
             });
             return $(this);
         };

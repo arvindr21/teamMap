@@ -89,9 +89,9 @@
                     var _self = $(this);
                     _self.show();
                     //if (isChecked || $.trim($("#search").val()).length == 0) {
-                        setTimeout(function () {
+                        //setTimeout(function () {
                             draw(users[parseInt(_self.data("id"))]);
-                        }, 125 + (key * 125));
+                        //}, 125 + (key * 125));
                     //}
                 } else {
                     $(this).hide();
@@ -99,7 +99,7 @@
             });
             // redraw the markers
 
-        }, 999);
+        }, 1299);
 
 
         /*$("#rp").on("change", function () {

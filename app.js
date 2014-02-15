@@ -43,9 +43,9 @@
             $(".m").on("click", function () {
 
                 map.clearMarkers();
-                $("#rp").prop("checked", true);
+               // $("#rp").prop("checked", true);
                 $('#search').val($.trim($(this).text())).trigger('keyup');
-                $("#rp").prop("checked", false);
+            //    $("#rp").prop("checked", false);
             });
 
 
@@ -78,8 +78,9 @@
         };
 
         $('#search').delayKeyup(function (ele) {
-            var isChecked = $("#rp").is(":checked");
-            if (isChecked || $.trim($(ele).val()).length == 0) map.clearMarkers();
+           // var isChecked = $("#rp").is(":checked");
+            //if (isChecked || $.trim($(ele).val()).length == 0)
+            map.clearMarkers();
             var valThis = $(ele).val().toLowerCase();
             $('#results>li').each(function (key, val) {
                 var text = $(this).text().toLowerCase();
@@ -87,11 +88,11 @@
                 if (text.indexOf(valThis) >= 0) {
                     var _self = $(this);
                     _self.show();
-                    if (isChecked || $.trim($("#search").val()).length == 0) {
+                    //if (isChecked || $.trim($("#search").val()).length == 0) {
                         setTimeout(function () {
                             draw(users[parseInt(_self.data("id"))]);
                         }, 125 + (key * 125));
-                    }
+                    //}
                 } else {
                     $(this).hide();
                 }
@@ -101,7 +102,7 @@
         }, 999);
 
 
-        $("#rp").on("change", function () {
+        /*$("#rp").on("change", function () {
             if ($(this).is(":checked")) {
                 $("#rplt").hide();
             } else {
@@ -112,7 +113,7 @@
             $("#rp").prop("checked", true);
             if ($.trim($('#search').val()).length > 0) $('#search').trigger("keyup");
             $("#rp").prop("checked", false);
-        });
+        });*/
 
 
 
